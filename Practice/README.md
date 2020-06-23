@@ -1,6 +1,6 @@
 # Codingame
 Problem solving practices
-# # Computational complexity
+# # Computational complexity (Bender - Episode 3)
  given two arrays of data (X, Y) the goal is to determine what's the most likely computational complexity from a family of fixed and known algorithmic complexities.
  
  Solution :
@@ -18,7 +18,7 @@ Problem solving practices
 the best correlation defines the most probable computational complexity among the following possibilities: 
 O(1), O(log n), O(n), O(n log n), O(n^2), O(n^2 log n), O(n^3), O(2^n)
 
-# # BFS-Graph
+# # BFS-Graph (SKYNET REVOLUTION EP1)
 
 This problem plays out on a graph where a “virus” moves from node to node, in search of an exit. 
 There are several exits and you have to cut access to these exits by finding the best link to cut each turn.
