@@ -1,4 +1,4 @@
-// returns mean of @tab, where @tan is an array of data
+// returns mean of @tab, where @tab is an array of data
 const moyenne = (tab) => {
   return Math.round(tab.reduce((a, v) => a + v) / tab.length);
 };
