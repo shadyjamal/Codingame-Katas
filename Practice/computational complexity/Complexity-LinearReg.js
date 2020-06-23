@@ -1,7 +1,3 @@
-// Using the Pearson's correlation coefficient (PCC) to measure linear correlation between two variables
-// given two arrays of data (X, Y) the PCC is calculated for different pairs:
-// (X, Y) (X^2, Y) (X^3, Y) (Log(X), Y) (X * Log(X), Y) (X^2 * Log(X), Y) (X^3 * Log(X), Y) (2^X, Y)
-// the best correlation defines the complexity of the programms generating the data
 // returns mean of @tab, where @tan is an array of data
 const moyenne = (tab) => {
   return Math.round(tab.reduce((a, v) => a + v) / tab.length);
