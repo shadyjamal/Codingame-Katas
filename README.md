@@ -1,6 +1,6 @@
 # Codingame
 Problem solving practices
-# Computational complexity
+# # Computational complexity
  Using the Pearson's correlation coefficient (PCC) to measure linear correlation between two variables ,
  given two arrays of data (X, Y) the PCC is calculated for different pairs:
  (X, Y) 
