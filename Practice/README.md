@@ -1,11 +1,11 @@
 # Codingame
 Problem solving practices
 # # Computational complexity (Bender - Episode 3)
- given two arrays of data (X, Y) the goal is to determine what's the most likely computational complexity from a family of fixed and known algorithmic complexities.
+ Using performance measures carried out on the execution time of the programs, the goal is to determine the most likely computational complexity from a family of fixed and known algorithmic complexities.
  
  Solution :
- Using the Pearson's correlation coefficient (PCC) to measure linear correlation between two variables ,
-  the PCC is calculated for different pairs:
+ Using the Pearson's correlation coefficient (PCC) to measure linear correlation between two arrays of data (X, Y).
+ the PCC is calculated for different pairs:
  * (X, Y) 
  * (X^2, Y) 
  * (X^3, Y) 
