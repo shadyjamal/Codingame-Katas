@@ -1,4 +1,4 @@
-# Codingame Contest:
+# 1 - Codingame Contest:
 # WHAT WILL I LEARN?
 This game is based on Pac-man, with a unique rock-paper-scissors twist.
 
@@ -14,4 +14,4 @@ Distances
 Control a team of pacs and eat more pellets than your opponent. Beware, an enemy pac just might be waiting around the corner to take a bite out of you!
 
 
-# Problem solving practices
+# 2 - Problem solving practices
