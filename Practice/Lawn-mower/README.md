@@ -1,4 +1,4 @@
-# # Lawnmower code kata
+# Lawnmower code kata
 
 A fleet of robotic lawn mowers are to be deployed to trim the grass of a large lawn.
 This lawn, which is perfectly rectangular, must be navigated by the mowers so that
@@ -14,7 +14,7 @@ or right respectively, without moving from its current spot. &#39;M&#39; means m
 one grid point, and maintain the same heading.
 Assume that the square directly North from (x, y) is (x, y+1).
 
-# INPUT
+## INPUT
 
 The first line of input is the upper-right coordinates of the lawn, the lower-left
 coordinates are assumed to be 0,0.
@@ -27,12 +27,12 @@ corresponding to the x and y co-ordinates and the mower&#39;s orientation.
 Each mower will be finished sequentially, which means that the second mower won&#39;t
 start to move until the first one has finished moving.
 
-# OUTPUT
+## OUTPUT
 
 The output for each mower should be its final co-ordinates and heading.
 INPUT AND OUTPUT EXAMPLES
 
-# Test Input:
+### Test Input:
 
 5 5  
 1 2 N  
@@ -40,7 +40,7 @@ LMLMLMLMM
 3 3 E  
 MMRMMRMRRM  
 
-Expected Output:
+### Expected Output:
 
 1 3 N  
 5 1 E 
