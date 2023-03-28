@@ -31,7 +31,8 @@ start to move until the first one has finished moving.
 
 The output for each mower should be its final co-ordinates and heading.
 INPUT AND OUTPUT EXAMPLES
-Test Input:
+
+# Test Input:
 5 5
 1 2 N
 LMLMLMLMM
