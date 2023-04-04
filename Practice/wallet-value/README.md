@@ -1,7 +1,7 @@
 # Wallet
 
-Given a portfolio containing stocks, construct a function that calculates the value of the portfolio in a currency.
-Actions have an action quantity and type. The type of stock can be, for example, oil, euros, bitcoins and dollars.
+Given a portfolio containing assets, construct a function that calculates the value of the portfolio in a currency.
+assets have an asset quantity and type. The type of asset can be, for example, oil, euros, bitcoins and dollars.
 To rate the portfolio in a currency, you can use an external API that provides exchange rates.
 
 # Solution
