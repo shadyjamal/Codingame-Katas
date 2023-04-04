@@ -1,7 +1,7 @@
 import { Currency, Wallet } from "./interface";
 import { getLatestConversionRates } from "./api";
 import { calculateWalletValue, getWalletSymbols } from "./utils";
-import { currency, wallet } from "./input";
+import { baseCurrency, wallet } from "./input";
 
 const getWalletValue = async (wall: Wallet, curr: Currency) => {
   const symbols = getWalletSymbols(wall);
@@ -13,4 +13,4 @@ const getWalletValue = async (wall: Wallet, curr: Currency) => {
   console.log(`Your Wallet Value is ${value.toFixed(2)} ${curr}`);
 };
 
-getWalletValue(wallet, currency);
+getWalletValue(wallet, baseCurrency);

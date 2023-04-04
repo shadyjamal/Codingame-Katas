@@ -17,6 +17,6 @@ export const wallet: Wallet = {
   ],
 };
 
-export const currency = Currency.EUR;
+export const baseCurrency = Currency.EUR;
 
 export const fixerApiKey = "AS6fHKKd823ubOsIEgbglQ02RbibVZ95";
