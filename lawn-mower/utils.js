@@ -1,25 +1,26 @@
 import { readFile } from "node:fs/promises";
 
-const readTxtFile = async (filePath) => {
+const LAWN_LOWER_X = 0;
+const LAWN_LOWER_Y = 0;
+
+export const readTxtFile = async (filePath) => {
   try {
-    const contents = await readFile(filePath, { encoding: "utf8" });
-    return contents.split(/\r?\n/);
+    const txt = await readFile(filePath, { encoding: "utf8" });
+    return txt.split(/\r?\n/);
   } catch (err) {
     console.error(err.message);
   }
 };
 
-export const parseInput = async () => {
-  const content = await readTxtFile("./input.txt");
-
+export const parseInput = async (input) => {
   const mowersArray = [];
 
-  const lawnDimensions = content?.[0]?.split(" ");
+  const lawnDimensions = input?.[0]?.split(" ");
 
-  for (var i = 1; i < content.length; i += 2) {
-    const coords = content[i].split(" ");
+  for (var i = 1; i < input.length; i += 2) {
+    const coords = input[i].split(" ");
 
-    const instructions = content?.[i + 1].split("");
+    const instructions = input?.[i + 1].split("");
 
     mowersArray.push({
       x: parseInt(coords?.[0]),
@@ -62,16 +63,23 @@ const handleRight = (directionIndex) =>
 const handleMove = (x, y, directionIndex, lawnDimensions) => {
   const mowerDirection = directions[directionIndex];
 
-  return {
-    newX: Math.min(
-      x + directionStep.x[mowerDirection],
-      parseInt(lawnDimensions[0])
-    ),
+  const lawn_Upper_X = parseInt(lawnDimensions[0]);
+  const lawn_Upper_Y = parseInt(lawnDimensions[1]);
 
-    newY: Math.min(
-      y + directionStep.y[mowerDirection],
-      parseInt(lawnDimensions[0])
-    ),
+  // Force the new Mower coords to be within the lower and upper bound of the lawn
+  const newX = Math.min(
+    Math.max(x + directionStep.x[mowerDirection], LAWN_LOWER_X),
+    lawn_Upper_X
+  );
+
+  const newY = Math.min(
+    Math.max(y + directionStep.y[mowerDirection], LAWN_LOWER_Y),
+    lawn_Upper_Y
+  );
+
+  return {
+    newX,
+    newY,
   };
 };
 

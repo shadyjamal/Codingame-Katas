@@ -1,7 +1,9 @@
-import { handleInstructions, parseInput } from "./utils.js";
+import { handleInstructions, parseInput, readTxtFile } from "./utils.js";
 
-const main = async () => {
-  const { lawnDimensions, mowersArray } = (await parseInput()) || {};
+export const lawnMower = async (input) => {
+  const { lawnDimensions, mowersArray } = (await parseInput(input)) || {};
+
+  let output = [];
 
   mowersArray.map((mower) => {
     const { x, y, direction, instructions } = mower;
@@ -14,8 +16,19 @@ const main = async () => {
       lawnDimensions,
     });
 
-    console.log(`${CoordX} ${CoordY} ${newDirection}`);
+    output.push(`${CoordX} ${CoordY} ${newDirection}`);
   });
+
+  return output.toString();
+};
+
+const main = async () => {
+  // read the input txt file and
+  const inputArr = await readTxtFile("./input.txt");
+
+  const result = await lawnMower(inputArr);
+
+  //console.log(result)
 };
 
 main();
